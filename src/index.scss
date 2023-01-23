@@ -1,0 +1,14 @@
+@import "reset-css";
+
+:root {
+    --gap: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--gap);
+    font-family: Arial, sans-serif;
+}
