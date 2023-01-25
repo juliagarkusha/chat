@@ -31,6 +31,7 @@
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "reset-css": "^5.0.1"
   }
 }

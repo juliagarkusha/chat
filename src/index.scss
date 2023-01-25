@@ -1,14 +1,73 @@
 @import "reset-css";
 
-:root {
-    --gap: 16px;
+//@import "src/styles/_base";
+//@import "src/styles/components/_input";
+//@import "src/styles/components/_button";
+//@import "src/styles/components/_messages";
+//@import "src/styles/components/messagesParts/_messageCard";
+//@import "src/styles/components/messagesParts/_messagesForm";
+
+header
+{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 25px;
 }
 
-* {
-    box-sizing: border-box;
+#info
+{
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-html {
-    font-size: var(--gap);
-    font-family: Arial, sans-serif;
+a{
+  color: #074E8C;
 }
+
+.scrollbar {
+  margin-left: 100px 0;
+  float: left;
+  height: 300px;
+  width: 500px;
+  background: #F5F5F5;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.force-overflow
+{
+  min-height: 450px;
+}
+
+#wrapper
+{
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+/*
+ *  STYLE 2
+ */
+
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #D62929;
+}
+

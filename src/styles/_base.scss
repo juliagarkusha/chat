@@ -1,0 +1,30 @@
+:root {
+  --gap: 16px;
+  --blue-900: #0A1929;
+  --blue-800: #001E3C;
+  --blue-700: #132F4C;
+  --blue-600: #004C99;
+  --gray-500: #b2b2b2;
+  --grey-300: #8A8F9B;
+  --grey-200: #868A96;
+  --orange-500: #E98510;
+  --orange-400: #d84315;
+  --orange-300: #FFA43A;
+  --orange-200: rgba(233, 133, 16, 0.31);
+  --orange-100: #FFC888;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--gap);
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--blue-900);
+  color: var(--white);
+}
