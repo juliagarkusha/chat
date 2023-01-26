@@ -11,20 +11,11 @@ class MessagesApi {
 
     this.ws.onopen = this.onOpenHandler.bind(this);
 
-    this.ws.onerror = (event) => {
+    this.ws.onerror = this.onErrorHandler.bind(this);
 
-    }
-
-    this.ws.onclose = (event) => {
-      console.log('debug event close: ', event);
-    }
+    this.ws.onclose = this.onCloseHandler.bind(this);
     
     this.ws.onmessage = this.onMessageHandler.bind(this);
-  }
-
-  onOpenHandler(event) {
-    console.log('debug this: ', this);
-    console.log('debug event error: ', event);
   }
 
   onMessageHandler(event) {
@@ -47,6 +38,19 @@ class MessagesApi {
     this.ws.send(strData);
     this.onMessage(data);
     this.sound.sendMessage.play();
+  }
+
+  onOpenHandler(event) {
+    console.log('debug this: ', this);
+    console.log('debug event error: ', event);
+  }
+
+  onCloseHandler(event) {
+    console.log('debug event close: ', event);
+  }
+
+  onErrorHandler(event) {
+    console.log('debug event error: ', event);
   }
 }
 
