@@ -9,32 +9,36 @@ class MessagesApi {
     this.onMessage = onMessage;
     this.ws = new WebSocket(MessagesApi.URL);
 
-    this.ws.onopen = (event) => {
-      console.log('debug event open: ', event);
-    }
+    this.ws.onopen = this.onOpenHandler.bind(this);
 
     this.ws.onerror = (event) => {
-      console.log('debug event error: ', event);
+
     }
 
     this.ws.onclose = (event) => {
       console.log('debug event close: ', event);
     }
     
-    this.ws.onmessage = (event) => {
-      try {
-        const data = JSON.parse(event.data);
+    this.ws.onmessage = this.onMessageHandler.bind(this);
+  }
 
-        if (data.token !== MessagesApi.token) {
-          return;
-        }
+  onOpenHandler(event) {
+    console.log('debug this: ', this);
+    console.log('debug event error: ', event);
+  }
 
-        this.onMessage(data);
-        this.sound.incomeMessage.play();
-      } catch (exception) {
-        console.log('Wrong message format!');
+  onMessageHandler(event) {
+    try {
+      const data = JSON.parse(event.data);
+
+      if (data.token !== MessagesApi.token) {
+        return;
       }
 
+      this.onMessage(data);
+      this.sound.incomeMessage.play();
+    } catch (exception) {
+      console.log('Wrong message format!');
     }
   }
 

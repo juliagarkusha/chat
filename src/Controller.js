@@ -1,5 +1,4 @@
 import MessagesApi from "./models/MessagesApi";
-import MessagesSound from "./models/MessagesSound";
 import WriteMessageFormView from './view/WriteMessageFormView';
 import ChatView from './view/ChatView';
 
