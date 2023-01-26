@@ -1,14 +1,8 @@
 @import "reset-css";
 
-:root {
-    --gap: 16px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: var(--gap);
-    font-family: Arial, sans-serif;
-}
+@import "src/styles/_base";
+@import "src/styles/components/_input";
+@import "src/styles/components/_button";
+@import "src/styles/components/_messages";
+@import "src/styles/components/messagesParts/_messageCard";
+@import "src/styles/components/messagesParts/_messagesForm";

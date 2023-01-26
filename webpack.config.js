@@ -19,7 +19,7 @@ module.exports = () => {
       index: [ path.resolve(SRC_PATH, 'index.js') ],
     },
     output: {
-      filename: '[name].js',
+      filename: '[name].min.js',
       path: DIST_PATH,
       publicPath: '/',
     },
@@ -47,7 +47,7 @@ module.exports = () => {
     plugins: [
       new MiniCssExtract(),
       new HtmlWebpackPlugin({
-        inject: true,
+        inject: false,
         filename: 'index.html',
         publicPath: '',
         template: path.resolve(SRC_PATH, 'index.pug'),
